@@ -1,14 +1,17 @@
 /*
 Copyright © 2024 NAME HERE <EMAIL ADDRESS>
-
 */
 package cmd
 
 import (
-	"os"
 
+	"os"
 	"github.com/spf13/cobra"
+
 )
+
+
+type RunEFunc func (cmd *cobra.Command, args []string) error  
 
 
 
