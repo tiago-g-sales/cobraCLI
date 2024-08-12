@@ -17,7 +17,3 @@ func GetDB() *sql.DB{
 func GetCategoryDB(db *sql.DB) Category {
 	return *NewCategory(db)
 }
-
-func CloseConection(db sql.DB){
-	defer db.Close()
-} 
