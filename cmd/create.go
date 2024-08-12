@@ -17,8 +17,6 @@ func newCreateCmd(categoryDb database.Category) *cobra.Command{
 		Short: "Create a new category",
 		Long: "Create a new cateory",
 		RunE: runCreate(categoryDb),
-
-
 	}
 }
 
@@ -34,7 +32,6 @@ func runCreate(categoryDb database.Category) RunEFunc{
 		}
 		return nil
 	}
-
 }
 
 func init() {
@@ -43,6 +40,5 @@ func init() {
 	createCmd.Flags().StringP("name", "n", "", "Name of the category")
 	createCmd.Flags().StringP("description", "d", "", "Description of the category")
 	createCmd.MarkFlagsRequiredTogether("name", "description")
-
 
 }
