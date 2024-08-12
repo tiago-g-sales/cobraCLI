@@ -38,7 +38,7 @@ func runCreate(categoryDb database.Category) RunEFunc{
 }
 
 func init() {
-	createCmd := newCreateCmd(GetCategoryDB(getDB()))
+	createCmd := newCreateCmd(database.GetCategoryDB(database.GetDB()))
 	categoryCmd.AddCommand(createCmd)
 	createCmd.Flags().StringP("name", "n", "", "Name of the category")
 	createCmd.Flags().StringP("description", "d", "", "Description of the category")
